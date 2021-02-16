@@ -5,5 +5,6 @@ FROM node:erbium-buster-slim
 RUN apt-get update \
  && apt-get install -y git jq \
  && yarn global add lerna
+ && yarn global add rimraf
 
 ENTRYPOINT ["/bin/sh"]
