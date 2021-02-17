@@ -4,9 +4,6 @@ FROM node:erbium-buster-slim
 # however it's only to install git and jq which should be stable
 RUN apt-get update \
  && apt-get install -y git jq \
- && yarn global add lerna \
- && yarn global add rimraf@3.0.2 \
- && yarn global add typescript@3.8.2 \
- && yarn global add rollup@2.28.1
+ && yarn global add lerna
 
 ENTRYPOINT ["/bin/sh"]
