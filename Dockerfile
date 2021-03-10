@@ -1,9 +1,5 @@
-FROM node:erbium-buster-slim
+FROM cimg/node:12.21
 
-# don't like updating first as it's not idempotent
-# however it's only to install git and jq which should be stable
-RUN apt-get update \
- && apt-get install -y git jq \
- && yarn global add lerna
+RUN yarn global add lerna@4.0.0
 
-ENTRYPOINT ["/bin/sh"]
+ENTRYPOINT ["/bin/bash"]
