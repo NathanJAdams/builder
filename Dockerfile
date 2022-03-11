@@ -17,11 +17,12 @@ RUN apt-get update \
  && sudo su
 
 
-# node, yarn, lerna, eslint-cli
+# node, yarn, lerna, nx
 RUN curl -sL https://deb.nodesource.com/setup_12.x | bash - \
  && apt-get install -y nodejs \
  && npm install -g yarn@1.22.10 \
- && yarn global add lerna@4.0.0
+ && yarn global add lerna@4.0.0 \
+ && yarn global add nx@13.8.1
 
 
 # aws-cli
